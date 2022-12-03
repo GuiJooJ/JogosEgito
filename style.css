@@ -1,0 +1,77 @@
+body{
+    background-image: url(fundo_egito.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+
+#mostrador{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 252px;
+}
+p{
+    float: left;
+    margin-right: 10px;
+    font-size: 30px;
+    color: white;
+    margin-top: 60px;
+}
+img{
+    border: 0;
+    height: 120px;
+}
+.tab{
+    width: 140px;
+    height: 120px;
+    border: 2px solid #fff;
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+}
+.tabuleiro{
+    width: 500px;
+    height: 300px;
+    margin: auto;
+}
+
+button {  
+    
+    background-color: royalblue;
+    position: relative;
+    height: 70px;
+    width: 250px;
+    margin-top: 2%; 
+    margin-left: 38%;
+    border-radius: 5px;
+    font-family: Arial;
+    border: none;
+    color: white;
+    font-size: 20px;
+    overflow: hidden;
+  }
+  button:hover{
+    background-color: white;
+    cursor: pointer;
+  }
+  button::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to left, blue, red);
+    left: var(--x);
+    top: var(--y);
+    transform: translate(-50%, -50%);
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    transition: all 0.5s linear;
+  }
+  button:hover::before{
+    height: 550px;
+    width: 550px;
+  }
+  button::after{
+    content: 'Tentar novamente';
+    position: relative;
+    z-index: 1;
+  }
